@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+body {
+    margin: 0 auto;
+    padding: 5%;
+    background-color: #11092d;
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+}
+.orange-border-row {
+    border: 1px solid #ffa500; /* Brighter orange color */
+    box-shadow: 0 0 10px #ffa500; /* Horizontal shadow, vertical shadow, blur radius, color */
+}
+
+
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    /* If there was a margin-top rule here, remove or comment it out */
+    margin-bottom: 15px; /* Adds a 5px gap below each row */
+    position: relative;
+    z-index: 1;
+}
+
+.flex-row.header-row {
+    margin-bottom: 0; /* Removes the gap below the header row */
+}
+
+.flex-cell {
+    flex: 1;
+    padding: 20px 20px 20px 25px;
+    background-color: #23212B;
+    color: white;
+    border: none;
+    text-align: left;
+    flex-grow: 1;
+    height: 80px;
+    display: flex; /* Added for flexbox properties */
+    align-items: center; /* Aligns content vertically */
+    justify-content: flex-start; /* Aligns content horizontally (left) */
+    text-align: left;
+    position: relative;
+    z-index: 2;
+
+}
+
+.flex-cell:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50%; /* Extend upwards */
+    bottom: -50%; /* Extend downwards */
+    width: 1px; /* Width of the line */
+    background-color: #333; /* Color of the line */
+}
+
+.flex-row:last-child .flex-cell:not(:first-child)::before {
+    bottom: 0; /* Adjust to not extend downwards */
+}
+
+.flex-row:first-child .flex-cell:not(:first-child)::before {
+    top: 0; /* Adjust to not extend upwards */
+}
+
+
+
+
+
+.flex-cell.product-name {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: space-between;
+}
+
+.rating-cell img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Set the width for product-name cells */
+.flex-cell.product-name, .header-row .flex-cell:first-child {
+    flex-basis: 20%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.flex-row.header-row .flex-cell {
+    border-top: none; /* Removes the top border from header cells */
+    background-color: transparent; /* No background color */
+    /* ... any other styles you want to apply specifically to header cells ... */
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (usually the left side) */
+    justify-content: space-between;
+    font-size: 20px; /* Set font size to 20px */
+}
+
+.flex-row.header-row .flex-cell:first-child {
+    border-left: none; /* Removes the left border from the first header cell */
+}
+
+.product-p{
+font-family: Inter;
+font-weight: 300;
+font-size: 14px;
+}
