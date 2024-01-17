@@ -122,15 +122,17 @@ font-size: 14px;
 
 .legend {
     display: flex;
-    align-items: center; /* To vertically align icons with text */
+    align-items: center; /* Vertically center align items */
+    justify-content: end; /* Align items to the left */
+    font-size: 14px; /* Set the font size for the text */
 }
 
 .legend img {
-    width: 20px; /* Adjust as needed */
+    width: 16px; /* Smaller width for the icons */
     height: auto;
     margin-right: 5px; /* Space between icon and text */
 }
 
 .legend span {
-    margin-right: 15px; /* Space between each legend item */
+    margin-right: 25px; /* Space between each legend item */
 }
