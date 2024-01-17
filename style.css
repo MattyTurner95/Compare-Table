@@ -2,7 +2,9 @@
 
 body {
     margin: 0 auto;
-    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
     background-color: #11092d;
     font-family: 'Titillium Web', sans-serif;
     color: #ffffff;
@@ -102,6 +104,8 @@ body {
     align-items: flex-start; /* Align items to the start (usually the left side) */
     justify-content: space-between;
     font-size: 20px; /* Set font size to 20px */
+    height: 100px; /* Set the height to 100px */
+
 }
 
 .flex-row.header-row .flex-cell:first-child {
@@ -112,4 +116,21 @@ body {
 font-family: Inter;
 font-weight: 300;
 font-size: 14px;
+}
+
+
+
+.legend {
+    display: flex;
+    align-items: center; /* To vertically align icons with text */
+}
+
+.legend img {
+    width: 20px; /* Adjust as needed */
+    height: auto;
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.legend span {
+    margin-right: 15px; /* Space between each legend item */
 }
